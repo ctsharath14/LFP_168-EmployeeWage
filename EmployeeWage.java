@@ -1,4 +1,4 @@
-//Solving using Case Statement
+//Calculating Wages for a Month
 
 public class EmployeeWage {
 	public static void main(String[] args) {
@@ -6,26 +6,34 @@ public class EmployeeWage {
 		final int PartTime = 2;
 		final int FullTime = 8;
 		final int WagePerHour = 100;	
-		int empPresent = (int)(Math.random() * 3);
-		int empHr;
-		switch(empPresent) {
-			case Present :
-				System.out.println("Employee is Present and working full-time");
-				empHr = FullTime;	
-			break;
-		
-			case PartTime :
-				System.out.println("Employee is Present and working part-time");
-				empHr = FullTime/2;
-			break;
+		final int WorkingDays = 25;
+
+		int totalSalary = 0;
+
+		for (int day=0;day<WorkingDays;day++) {
+			int empPresent = (int)(Math.random() * 3);
+			int empHr;
+			switch(empPresent) {
+				case Present :
+					System.out.println("Employee was Present and worked full-time");
+					empHr = FullTime;	
+				break;
 			
-			default :
-				System.out.println("Employee is Absent");
-				empHr = 0;
-			break;
-	
+				case PartTime :
+					System.out.println("Employee was Present and worked part-time");
+					empHr = FullTime/2;
+				break;
+				
+				default :
+					System.out.println("Employee was Absent");
+					empHr = 0;
+				break;
+			}
+			int empWage = empHr * WagePerHour;
+			totalSalary = totalSalary + empWage;
+			System.out.println("Employee Wage is : Rs."+empWage);
+			System.out.println("<--------------------------------------------------------------->");
 		}
-		int empWage = empHr * WagePerHour;
-		System.out.println("Employee Wage is : Rs."+empWage);
-	}
+		System.out.println("Employee monthly salary is : Rs."+totalSalary);
+	}	
 }
