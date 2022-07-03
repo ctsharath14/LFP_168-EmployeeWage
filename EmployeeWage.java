@@ -6,7 +6,7 @@ public class EmployeeWage {
 		final int PartTime = 2;
 		final int FullTime = 8;
 		final int WagePerHour = 100;	
-		final int WorkingDays = 25;
+		final int WorkingDays = 20;
 
 		int totalSalary = 0;
 
