@@ -1,4 +1,4 @@
-//Add part time employee and Wage
+//Solving using Case Statement
 
 public class EmployeeWage {
 	public static void main(String[] args) {
@@ -8,20 +8,24 @@ public class EmployeeWage {
 		final int WagePerHour = 100;	
 		int empPresent = (int)(Math.random() * 3);
 		int empHr;
-		System.out.println(empPresent);
-		if (empPresent == Present) {
-			System.out.println("Employee is Present and working full-time");
-			empHr = FullTime;
-		} 
-		else if(empPresent == PartTime) {
-			System.out.println("Employee is Present and working part-time");
-			empHr = FullTime/2;
-		} 
-		else {
-			System.out.println("Employee is Absent");
-			empHr = 0;
+		switch(empPresent) {
+			case Present :
+				System.out.println("Employee is Present and working full-time");
+				empHr = FullTime;	
+			break;
+		
+			case PartTime :
+				System.out.println("Employee is Present and working part-time");
+				empHr = FullTime/2;
+			break;
+			
+			default :
+				System.out.println("Employee is Absent");
+				empHr = 0;
+			break;
+	
 		}
 		int empWage = empHr * WagePerHour;
-		System.out.println("Employee daily Wage is : Rs."+empWage);
+		System.out.println("Employee Wage is : Rs."+empWage);
 	}
 }
