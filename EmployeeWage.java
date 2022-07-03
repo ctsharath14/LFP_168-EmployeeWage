@@ -1,6 +1,6 @@
 //Calculate wages till a condition of a total working hours or day is reached for a month
 
-public class EmployeeWageBuilder {
+public class EmployeeWage {
 	public static void main(String[] args) {
 		final int Present = 1;
 		final int PartTime = 2;
