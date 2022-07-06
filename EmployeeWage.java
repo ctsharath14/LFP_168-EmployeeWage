@@ -2,26 +2,22 @@
 
 public class EmployeeWage {
 	public static void main(String[] args) {
-		final int Present = 1;
-		final int PartTime = 2;
-		final int FullTime = 8;
-		final int WagePerHour = 100;	
-		final int WorkingDays = 20;
-
+		int wagePerHour = 20;	
+		int totalWorkingDays = 20;
 		int totalSalary = 0;
 
-		for (int day=0;day<WorkingDays;day++) {
+		for (int day=0;day<totalWorkingDays;day++) {
 			int empPresent = (int)(Math.random() * 3);
 			int empHr;
 			switch(empPresent) {
-				case Present :
+				case 1 :
 					System.out.println("Employee was Present and worked full-time");
-					empHr = FullTime;	
+					empHr = 8;	
 				break;
 			
-				case PartTime :
+				case 2 :
 					System.out.println("Employee was Present and worked part-time");
-					empHr = FullTime/2;
+					empHr = 4;
 				break;
 				
 				default :
@@ -29,11 +25,11 @@ public class EmployeeWage {
 					empHr = 0;
 				break;
 			}
-			int empWage = empHr * WagePerHour;
+			int empWage = empHr * wagePerHour;
 			totalSalary = totalSalary + empWage;
-			System.out.println("Employee Wage is : Rs."+empWage);
+			System.out.println("Employee Wage was : "+empWage+"$");
 			System.out.println("<--------------------------------------------------------------->");
 		}
-		System.out.println("Employee monthly salary is : Rs."+totalSalary);
+		System.out.println("Employee monthly salary is : "+totalSalary+"$");
 	}	
 }
