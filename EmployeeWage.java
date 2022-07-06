@@ -2,21 +2,19 @@
 
 public class EmployeeWage {
 	public static void main(String[] args) {
-		final int Present = 1;
-		final int FullTime = 8;
-		final int WagePerHour = 100;	
+		int wagePerHour = 20;	
 		int empPresent = (int)(Math.random() * 2);
 		int empHr;
-		if (empPresent == Present) {
+		if (empPresent == 1) {
 			System.out.println("Employee is Present");
-			empHr = FullTime;
+			empHr = 8;
 		} 
 		else {
 			System.out.println("Employee is Absent");
 			empHr = 0;
 		}
-		int empWage = empHr * WagePerHour;
-		System.out.println("Employee Wage is : Rs."+empWage);
+		int empWage = empHr * wagePerHour;
+		System.out.println("Employee Wage is :"+empWage+"$");
 	}
 	
 }
