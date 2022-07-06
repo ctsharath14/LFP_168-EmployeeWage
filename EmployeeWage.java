@@ -1,27 +1,23 @@
-//Add part time employee and Wage
+//Add part time Employee and Wage
 
 public class EmployeeWage {
 	public static void main(String[] args) {
-		final int Present = 1;
-		final int PartTime = 2;
-		final int FullTime = 8;
-		final int WagePerHour = 100;	
+		int wagePerHour = 20;	
 		int empPresent = (int)(Math.random() * 3);
 		int empHr;
-		System.out.println(empPresent);
-		if (empPresent == Present) {
+		if (empPresent == 1) {
 			System.out.println("Employee is Present and working full-time");
-			empHr = FullTime;
+			empHr = 8;
 		} 
-		else if(empPresent == PartTime) {
+		else if(empPresent == 2) {
 			System.out.println("Employee is Present and working part-time");
-			empHr = FullTime/2;
+			empHr = 4;
 		} 
 		else {
 			System.out.println("Employee is Absent");
 			empHr = 0;
 		}
-		int empWage = empHr * WagePerHour;
-		System.out.println("Employee daily Wage is : Rs."+empWage);
+		int empWage = empHr * wagePerHour;
+		System.out.println("Employee daily Wage is : "+empWage+"$");
 	}
 }
